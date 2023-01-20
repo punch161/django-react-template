@@ -3,7 +3,7 @@ LABEL Robert Wells <rwells@dvele.com>
 
 # Python can write to stdout / no pyc files
 ENV PYTHONUNBUFFERED 1
-ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONDONTWRITEBYTECODE 1 
 
 # Building a base image with our requirements
 RUN mkdir /app

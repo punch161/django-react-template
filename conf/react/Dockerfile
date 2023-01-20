@@ -1,5 +1,5 @@
 FROM node:10-alpine
-MAINTAINER Robert Wells <rwells@dvele.com>
+LABEL Robert Wells <rwells@dvele.com>
 
 
 WORKDIR /tmp
