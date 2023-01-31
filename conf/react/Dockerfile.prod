@@ -1,5 +1,5 @@
-FROM node:10-alpine
-MAINTAINER Robert Wells <rwells@dvele.com>
+FROM node:14-alpine
+LABEL Robert Wells <rwells@dvele.com>
 
 WORKDIR /tmp
 COPY front/package.json /tmp/
@@ -24,7 +24,7 @@ COPY /conf/react/webpack.common.js /app/
 
 RUN yarn run build:prod
 
-FROM nginx:1.17.5-alpine
+FROM nginx:1.23.3-alpine
 COPY --from=build /app/build /app/
 COPY --from=build /app/nginx.conf /etc/nginx/nginx.conf
 EXPOSE 80
